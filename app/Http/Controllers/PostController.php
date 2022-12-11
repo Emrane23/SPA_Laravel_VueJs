@@ -49,7 +49,7 @@ class PostController extends Controller
         $post->title = $request->title ; 
         $post->body = $request->body ; 
         $post->save();
-        return response()->json(['status'=>'success', 'data'=>$post],200);
+        return $this->json(['status'=>'success', 'data'=>$post],200);
     }
 
     /**

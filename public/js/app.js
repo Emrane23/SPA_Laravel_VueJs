@@ -1981,12 +1981,12 @@ __webpack_require__.r(__webpack_exports__);
             body: ""
           };
           _this.posts.unshift(res.data.data);
-        } else {
-          Toast.fire({
-            icon: "error",
-            title: "Something went wrong!"
-          });
         }
+      })["catch"](function (err) {
+        Toast.fire({
+          icon: "error",
+          title: "Something went wrong!"
+        });
       });
     },
     getPosts: function getPosts() {

@@ -104,12 +104,12 @@ export default {
             body: "",
           };
           this.posts.unshift(res.data.data)
-        } else {
-          Toast.fire({
+        } 
+      }).catch(err => {
+        Toast.fire({
             icon: "error",
             title: "Something went wrong!",
           });
-        }
       });
     },
     getPosts(){
